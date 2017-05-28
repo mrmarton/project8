@@ -1,0 +1,66 @@
+/* Tour page styles */
+
+.heading {
+  display: inline-block;
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.card {
+  margin: 0 15px 60px;
+  padding: 40px 5px;
+}
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  vertical-align: text-top;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+tr:nth-child(even),
+thead {
+  background-color: #d3d3d3;
+}
+
+#date {
+    width: 50%
+}
+
+#venue,
+#location {
+    width: 50%;
+}
+
+caption {
+  display: none;
+}
+
+
+
+/* Styles for larger screens */
+@media screen and (min-width: 420px) {
+
+  .card {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,330 @@
+/* Global Layout Set-up */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #2b2b2b;
+  background: #fffcf5;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: rgba(45, 43, 48, 0.8);
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  z-index: 1000;
+  text-align: center;
+}
+
+.nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+  display: block;
+  margin-right: auto;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+
+.nav a {
+  color: #d3d3d3;
+  transition: all .5s;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: white;
+  outline-color: white;
+}
+
+header {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  overflow: hidden;
+  height: 350px;
+  box-shadow: 0 0 10px 0 rgba(45, 43, 48, 0.9);
+}
+
+header #photo {
+  position: absolute;
+  max-height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header #text {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  padding: 0 15px;
+}
+
+header #name {
+  color: #2b2b2b;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+header #tagline {
+  color: #800;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 20px 0 0;
+}
+
+.name {
+  font-weight: 300;
+}
+
+/* Credit for the pick SVG goes to Jeremy Savage at The Noun Project */
+.pick::before,
+.pick::after {
+  display: inline-block;
+  width: 12px;
+  height: auto;
+  margin: 0 15px;
+}
+
+.card {
+  margin: 60px 30px;
+  padding: 40px 30px;
+  text-align: left;
+  border-top: 4px solid #800;
+  clear: both;
+  transition: box-shadow .4s ease-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 70px 0 rgba(45, 43, 48, 0.25);
+}
+
+.button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  color: #d3d3d3;
+  margin-top: 25px;
+  background-color: rgba(45, 43, 48, 0.9);
+  border: none;
+  transition: color .5s;
+}
+
+.button:hover,
+.button:focus {
+  color: white;
+  outline-color: #800;
+}
+
+.photo {
+  display: block;
+  width: 200px;
+  height: 0%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 rgba(45, 43, 48, 0.9);
+}
+
+.information {
+  width: 100%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #800;
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+/* Footer styles */
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 20px 40px;
+}
+
+footer .copyright {
+  font-size: 1rem;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  margin: 0 15px;
+  width: 32px;
+  height: auto;
+  opacity: 0.6;
+  transition: transform .4s, opacity .5s;
+}
+
+a.social:hover,
+a.social:focus {
+  transform: scale(1.15);
+  opacity: 0.9;
+  outline-color: #800;
+}
+
+
+
+/* Styles for larger screens */
+@media screen and (min-width: 420px) {
+
+  .nav {
+    font-size: 1.1rem;
+  }
+
+  .nav .name {
+    letter-spacing: 5px;
+  }
+
+  header #name,
+  header #tagline {
+    letter-spacing: 2px;
+  }
+
+  header #name {
+    font-size: 4vmax;
+  }
+
+  header #tagline {
+    font-size: 2.5vmax;
+  }
+
+  .pick::before,
+  .pick::after {
+    width: 14px;
+  }
+
+  .card {
+    margin: 60px 40px;
+  }
+
+  .heading {
+    font-size: 2.5vmax;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .flex {
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1100px;
+  }
+
+  header {
+    min-height: 470px;
+  }
+
+  .nav {
+    max-width: 1100px;
+    font-size: 1.2rem;
+    padding: 0 30px;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    font-size: 1.2rem;
+    line-height: 1.6em;
+  }
+
+  .card {
+    margin: 60px auto;
+    padding: 20px 35px 40px;
+    width: 80%;
+    max-width: 900px;
+  }
+
+  .photo {
+    width: 35%;
+    margin: 20px 50px 20px 10px;
+  }
+
+  .information {
+    text-align: left;
+  }
+
+  .heading {
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 0.8em;
+    max-width: 1100px;
+    margin: 40px auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+
+  header #text {
+    top: 30%;
+  }
+
+  header #name {
+    font-size: 50px;
+  }
+
+  header #tagline,
+  .heading {
+    font-size: 30px;
+  }
+
+  .pick::before,
+  .pick::after {
+    width: 16px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  header #photo {
+    width: 100%;
+    max-height: none;
+    bottom: 0%
+  }
+}
